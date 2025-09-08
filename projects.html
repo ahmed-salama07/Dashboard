@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/projects.css">
+
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="list">
+            <img src="images/Company's logo.png" alt="Logo">
+            <nav class="sidebar-nav">
+                <ul>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a>
+                        </li>
+                        <li><a href="projects.html"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                        <li><a href="#"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+                        <li><a href="#"><i class="fa-solid fa-umbrella-beach"></i> Vacations</a></li>
+                        <li><a href="profile.html"><i class="fa-solid fa-users"></i> Employees</a></li>
+                        <li><a href="#"><i class="fa-solid fa-message"></i> Messenger</a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-info"></i> Info Portal</a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+        <div class="logout">
+            <div class="laptop_image">
+                <img src="images/illustration.png" alt="Laptop">
+            </div>
+            <div class="button">
+                <button><i class="fa-solid fa-comment"></i> Support</button>
+            </div>
+            <div class="logout_text">
+                <p><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</p>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="navbar">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="profile">
+                <div class="bell_icon">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="profile_content">
+                    <img src="images/profile_pic.jpg" alt="Profile Picture">
+                    <p>Ahmed Ashraf</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="profile">
+                <h1>My Profile</h1>
+            </div>
+            <div class="gear_btn">
+                <div class="gear_icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <div class="profile_section">
+            <!-- section -->
+            <section class="info">
+                <div class="info_header">
+                    <img src="images/profile_pic.jpg" alt="Picture">
+                    <div class="icon">
+                        <div class="icon_pen">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_intro">
+                    <h3>Ahmed Ashraf</h3>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="main_info">
+                    <h3>Main info</h3>
+                    <form action="#" method="post">
+                        <div class="form_group">
+                            <div class="position">
+                                <label for="position">Position</label>
+                                <input type="text" id="position" name="position" value="Full Stack Developer" readonly>
+                            </div>
+                            <div class="company">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" value="ITI" readonly>
+                            </div>
+                            <div class="location">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" name="location" value="Alex, Egypt " readonly>
+                            </div>
+                            <div class="birthdate">
+                                <label for="birthdate">Birth Date</label>
+                                <input type="text" id="birthdate" name="birthdate" value="Oct 21, 1999" readonly>
+                            </div>
+                        </div>
+                    </form>
+                    <h3>Contact Info</h3>
+                    <form action="#" method="post">
+                        <div class="form_group">
+                            <div class="email">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" value="a.ashraf2041@gmail.com" readonly>
+                            </div>
+                            <div class="phone">
+                                <label for="phone">Mobile Number</label>
+                                <input type="tel" id="phone" name="phone" value="+20 115 563 0065" readonly>
+                            </div>
+                            <div class="skype">
+                                <label for="skype">Skype</label>
+                                <input type="text" id="skype" name="skype" value="N/A" readonly>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="projects_info">
+                <div class="header">
+                    <div class="list2">
+                        <ul>
+                            <li class="active"><a href="projects.html">Projects</a></li>
+                            <li><a href="profile.html">Team</a></li>
+                            <li><a href="#">My vacations</a></li>
+                        </ul>
+                    </div>
+                    <div class="curr_projects">
+                        <div class="filter_icon">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <div class="projects_content">
+                            <p>Current Projects</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project_cards">
+                    <div class="project_card">
+                        <div class="left-card">
+                            <div class="card_header">
+                                <div class="card_image">
+                                    <img src="images/card1.png" alt="card_image">
+                                </div>
+                                <div class="project_number">
+                                    <p>PN0001265</p>
+                                    <h3>Medical App (iOS native)</h3>
+                                </div>
+                            </div>
+                            <div class="card_content">
+                                <div class="date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span>Created Sep 12, 2020</span>
+                                </div>
+                                <div class="difficulty yellow">
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    <span>Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-card">
+                            <h4>Project Data</h4>
+                            <div class="tasks">
+                                <div class="all_tasks">
+                                    <p>All tasks</p>
+                                    <p>34</p>
+                                </div>
+                                <div class="active_tasks">
+                                    <p>Active tasks</p>
+                                    <p>13</p>
+                                </div>
+                                <div class="assignees">
+                                    <p>Assignees</p>
+                                    <img src="images/team4.png" alt="">
+                                    <img src="images/profile_pic.jpg" alt="">
+                                    <img src="images/team5.png" alt="">
+                                    <span>+2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div class="left-card">
+                            <div class="card_header">
+                                <div class="card_image">
+                                    <img src="images/card2.png" alt="card_image">
+                                </div>
+                                <div class="project_number">
+                                    <p>PN0001221</p>
+                                    <h3>Food Delivery Service</h3>
+                                </div>
+                            </div>
+                            <div class="card_content">
+                                <div class="date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span>Created Sep 10, 2020</span>
+                                </div>
+                                <div class="difficulty yellow">
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    <span>Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-card">
+                            <h4>Project Data</h4>
+                            <div class="tasks">
+                                <div class="all_tasks">
+                                    <p>All tasks</p>
+                                    <p>50</p>
+                                </div>
+                                <div class="active_tasks">
+                                    <p>Active tasks</p>
+                                    <p>24</p>
+                                </div>
+                                <div class="assignees">
+                                    <p>Assignees</p>
+                                    <img src="images/team4.png" alt="">
+                                    <img src="images/team3.png" alt="">
+                                    <img src="images/team2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div class="left-card">
+                            <div class="card_header">
+                                <div class="card_image">
+                                    <img src="images/Company's logo.png" alt="card_image">
+                                </div>
+                                <div class="project_number">
+                                    <p>PN0001290</p>
+                                    <h3>Internal Project</h3>
+                                </div>
+                            </div>
+                            <div class="card_content">
+                                <div class="date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <span>Created May 28, 2020</span>
+                                </div>
+                                <div class="difficulty green">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                    <span>Low</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-card">
+                            <h4>Project Data</h4>
+                            <div class="tasks">
+                                <div class="all_tasks">
+                                    <p>All tasks</p>
+                                    <p>23</p>
+                                </div>
+                                <div class="active_tasks">
+                                    <p>Active tasks</p>
+                                    <p>20</p>
+                                </div>
+                                <div class="assignees">
+                                    <p>Assignees</p>
+                                    <img src="images/team4.png" alt="">
+                                    <img src="images/profile_pic.jpg" alt="">
+                                    <img src="images/team3.png" alt="">
+                                    <span>+5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <script src="js/all.min.js"></script>
+</body>

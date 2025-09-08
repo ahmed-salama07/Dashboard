@@ -1,0 +1,534 @@
+:root {
+    --background-color: #f4f9fd;
+    --blue-color: #3f8cff;
+    --grey-color: #7d8592;
+    --yellow-color: #fdc748;
+    --pink-color: #de92eb;
+    --purple-color: #6d5dd3;
+    --green-color: #0ac947;
+    --light-grey-color: #e6edf5;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    padding: 15px;
+    display: flex;
+}
+
+aside {
+    background-color: white;
+    width: 11%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 3px;
+    border-radius: 15px;
+}
+
+.sidebar .list img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.sidebar .list .sidebar-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.sidebar .list .sidebar-nav ul li a {
+    text-decoration: none;
+    color: var(--grey-color);
+    padding: 20px 30px;
+}
+
+
+.sidebar .list .sidebar-nav ul li a.active {
+    color: var(--blue-color);
+    position: relative;
+    background-color: var(--background-color);
+    border-right: 6px solid var(--blue-color);
+    border-radius: 5px;
+
+}
+
+.sidebar .list .sidebar-nav ul li a:hover {
+    color: var(--blue-color);
+}
+
+.sidebar .logout {
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.sidebar .logout .laptop_image img {
+    width: 120px;
+    height: 120px;
+}
+
+.sidebar .logout button {
+    background-color: var(--blue-color);
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar .logout {
+    margin-left: 5px;
+}
+
+.sidebar .logout .logout_text {
+    color: var(--grey-color);
+    align-self: start;
+    margin-left: 5px;
+}
+
+.sidebar .logout .logout_text:hover {
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+main {
+    width: 85%;
+    margin-left: 20px;
+}
+
+main .navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+main .navbar .search {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 300px;
+    color: var(--grey-color);
+    margin-left: 15px;
+}
+
+main .navbar .search input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--grey-color);
+}
+
+main .navbar .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-right: 15px;
+}
+
+main .navbar .profile .bell_icon {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main .navbar .profile .bell_icon .fa-bell {
+    font-size: 20px;
+}
+
+main .navbar .profile .bell_icon:hover {
+    color: var(--blue-color);
+}
+
+main .navbar .profile_content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+main .navbar .profile_content .fa-chevron-down {
+    cursor: pointer;
+}
+
+main .navbar .profile_content .fa-chevron-down:hover {
+    color: var(--blue-color);
+}
+
+main .navbar .profile_content p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+main .navbar .profile_content img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+main .content .profile {
+    margin-left: 35px;
+}
+
+main .content .gear_btn .gear_icon {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 35px;
+}
+
+
+main .content .gear_btn .gear_icon:hover {
+    color: var(--blue-color);
+}
+
+main .profile_section {
+    display: flex;
+    gap: 30px;
+}
+
+
+main .profile_section .info {
+    width: 15%;
+    background-color: white;
+    padding: 15px 3px;
+    border-radius: 15px;
+    margin-left: 35px;
+}
+
+main .profile_section .info .info_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+main .profile_section .info .info_header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--blue-color);
+    border-right-color: var(--grey-color);
+    cursor: pointer;
+}
+
+main .profile_section .info .info_header .icon .icon_pen {
+    background-color: var(--background-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+main .profile_section .info .info_header .icon .icon_pen:hover {
+    background-color: var(--blue-color);
+    color: white;
+    cursor: pointer;
+}
+
+main .profile_section .info .info_intro {
+    padding: 0 15px;
+    border-bottom: 2px solid var(--background-color);
+}
+
+main .profile_section .info .info_intro p {
+    color: var(--grey-color);
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+main .profile_section .info .main_info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: var(--grey-color);
+    line-height: 1.5;
+
+}
+
+main .profile_section .info .main_info h3 {
+    color: black;
+}
+
+main .profile_section .info .main_info form .form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .profile_section .info .main_info form .form_group>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .profile_section .info .main_info form .form_group>div input {
+    padding: 8px 10px;
+    border: 2px solid var(--background-color);
+    border-radius: 15px;
+    color: var(--grey-color);
+    margin-bottom: 5px;
+}
+
+main .profile_section .info .main_info form .form_group>div input:focus {
+    border: 2px solid var(--blue-color);
+    outline: none;
+}
+
+main .profile_section .info .main_info form .form_group>div label {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px 5px;
+}
+
+main .profile_section .info .main_info form .form_group .location input {
+    padding: 8px 35px 8px 10px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 25px 25px;
+}
+
+main .profile_section .info .main_info form .form_group .birthdate input {
+    padding: 8px 35px 8px 10px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 25px 25px;
+}
+
+
+main .profile_section .projects_info {
+    flex: 1;
+    padding: 15px;
+}
+
+main .profile_section .projects_info .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+
+main .profile_section .projects_info .header .list2 ul {
+    display: flex;
+    list-style: none;
+    background-color: var(--light-grey-color);
+    border-radius: 30px;
+    width: fit-content;
+}
+
+main .profile_section .projects_info .header .list2 ul li {
+    padding: 15px 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .profile_section .projects_info .header .list2 ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+main .profile_section .projects_info .header .list2 ul li:hover {
+    background-color: var(--blue-color);
+    border-radius: 30px;
+}
+
+main .profile_section .projects_info .header .list2 ul li:hover a {
+    color: white;
+}
+
+main .profile_section .projects_info .header .list2 ul li.active {
+    background-color: var(--blue-color);
+    border-radius: 30px;
+}
+
+main .profile_section .projects_info .header .list2 ul li.active a {
+    color: white;
+}
+
+main .profile_section .projects_info .header .curr_projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+main .profile_section .projects_info .header .curr_projects .filter_icon {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main .profile_section .projects_info .header .curr_projects .filter_icon .fa-filter {
+    font-size: 20px;
+}
+
+main .profile_section .projects_info .header .curr_projects .filter_icon .fa-filter:hover {
+    color: var(--blue-color);
+}
+
+main .profile_section .projects_info .header .curr_projects .projects_content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+main .profile_section .projects_info .header .curr_projects .projects_content .fa-chevron-down {
+    cursor: pointer;
+}
+
+main .profile_section .projects_info .header .curr_projects .projects_content .fa-chevron-down:hover {
+    color: var(--blue-color);
+}
+
+main .profile_section .projects_info .header .curr_projects .projects_content p {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+main .profile_section .projects_info .project_cards .project_card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card {
+    border-right: 4px solid var(--background-color);
+    flex: 1;
+    padding: 10px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_header .project_number p {
+    color: var(--grey-color);
+    font-weight: 300;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_content .date {
+    color: var(--grey-color);
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_content .difficulty.yellow {
+    color: var(--yellow-color);
+    margin-right: 10px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .left-card .card_content .difficulty.green {
+    color: var(--green-color);
+    margin-right: 10px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .right-card {
+    flex: 1;
+    padding: 0 15px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .right-card h4 {
+    margin-bottom: 25px;
+    padding-left: 60px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .right-card .tasks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* text-align: center; */
+}
+
+main .profile_section .projects_info .project_cards .project_card .right-card .tasks>div>p:first-child {
+    color: var(--grey-color);
+    margin-bottom: 10px;
+}
+
+main .profile_section .projects_info .project_cards .project_card .right-card .tasks>div>p:nth-child(2) {
+    font-weight: 800;
+}
+
+
+main .profile_section .projects_info .project_cards .project_card .right-card .tasks .assignees img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+main .profile_section .projects_info .project_cards .project_card .right-card .tasks .assignees span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
