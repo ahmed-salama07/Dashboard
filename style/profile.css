@@ -11,408 +11,434 @@
 
 * {
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--background-color);
+    background: var(--background-color);
     padding: 15px;
     display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 aside {
-    background-color: white;
-    width: 11%;
+    background: #fff;
+    width: 220px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 15px 3px;
+    justify-content: space-between;
+    padding: 20px 15px;
     border-radius: 15px;
+    transition: width .35s ease, box-shadow .35s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease 0.1s forwards;
+}
+
+aside:hover {
+    width: 260px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
 }
 
 .sidebar .list img {
     width: 50px;
     height: 50px;
-    margin-bottom: 15px;
-    margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 .sidebar .list .sidebar-nav ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    list-style: none;
+    gap: 28px;
     padding: 0;
     margin-top: 15px;
 }
 
 .sidebar .list .sidebar-nav ul li a {
-    text-decoration: none;
+    display: block;
     color: var(--grey-color);
-    padding: 20px 30px;
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 8px;
+    transition: color .25s, background .25s, border-right-color .25s;
 }
 
-
+.sidebar .list .sidebar-nav ul li a:hover,
 .sidebar .list .sidebar-nav ul li a.active {
     color: var(--blue-color);
-    position: relative;
-    background-color: var(--background-color);
+    background: var(--background-color);
     border-right: 6px solid var(--blue-color);
-    border-radius: 5px;
-
-}
-
-.sidebar .list .sidebar-nav ul li a:hover {
-    color: var(--blue-color);
 }
 
 .sidebar .logout {
-    margin-top: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
     padding: 10px 0;
 }
 
 .sidebar .logout .laptop_image img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
 }
 
 .sidebar .logout button {
-    background-color: var(--blue-color);
-    color: white;
+    background: var(--blue-color);
+    color: #fff;
     border: none;
-    padding: 13px 20px;
+    padding: 12px 22px;
     border-radius: 10px;
-    cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
+    transition: transform .25s;
 }
 
-.sidebar .logout {
-    margin-left: 5px;
+.sidebar .logout button:hover {
+    transform: scale(1.05);
 }
 
 .sidebar .logout .logout_text {
     color: var(--grey-color);
-    align-self: start;
-    margin-left: 5px;
+    cursor: pointer;
+    transition: color .25s;
 }
 
 .sidebar .logout .logout_text:hover {
     color: var(--blue-color);
-    cursor: pointer;
 }
 
 main {
-    width: 85%;
-    margin-left: 20px;
+    flex: 1;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(50%, 50%);
+    opacity: 0;
+    animation: slideInFromBottomRight 0.9s ease 0.5s forwards;
 }
 
-main .navbar {
+.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 15px;
     border-radius: 15px;
-    justify-content: space-between;
     margin-bottom: 10px;
+    transition: background .35s, box-shadow .35s;
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slideInFromTop 0.7s ease 0.3s forwards;
 }
 
-main .navbar .search {
-    background-color: white;
-    padding: 10px 15px;
+.navbar:hover {
+    background: #eaf2ff;
+    box-shadow: 0 4px 12px rgba(63, 140, 255, .25);
+}
+
+.navbar .search {
+    display: flex;
+    align-items: center;
+    background: #fff;
     border-radius: 10px;
+    padding: 10px 14px;
     width: 300px;
-    color: var(--grey-color);
-    margin-left: 15px;
 }
 
-main .navbar .search input {
+.navbar .search input {
+    flex: 1;
     border: none;
     outline: none;
     font-size: 16px;
     color: var(--grey-color);
 }
 
-main .navbar .profile {
+.navbar .profile {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 35px;
-    margin-right: 15px;
+    gap: 32px;
 }
 
-main .navbar .profile .bell_icon {
-    background-color: white;
-    padding: 15px;
+.navbar .profile .bell_icon {
+    background: #fff;
+    padding: 13px;
     border-radius: 10px;
     cursor: pointer;
+    transition: color .25s, transform .25s;
 }
 
-main .navbar .profile .bell_icon .fa-bell {
-    font-size: 20px;
-}
-
-main .navbar .profile .bell_icon:hover {
+.navbar .profile .bell_icon:hover {
     color: var(--blue-color);
+    transform: rotate(12deg);
 }
 
-main .navbar .profile_content {
+.navbar .profile_content {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: white;
-    padding: 5px 10px;
+    background: #fff;
+    padding: 6px 12px;
     border-radius: 10px;
 }
 
-main .navbar .profile_content .fa-chevron-down {
-    cursor: pointer;
-}
-
-main .navbar .profile_content .fa-chevron-down:hover {
-    color: var(--blue-color);
-}
-
-main .navbar .profile_content p {
-    font-weight: 600;
-    font-size: 14px;
-}
-
-main .navbar .profile_content img {
+.navbar .profile_content img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
+    transition: transform .3s;
 }
 
-main .content {
+.navbar .profile_content img:hover {
+    transform: scale(1.1);
+}
+
+.navbar .profile_content p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-main .content .profile {
+.content .profile {
     margin-left: 35px;
 }
 
-main .content .gear_btn .gear_icon {
-    background-color: white;
+.content .gear_btn .gear_icon {
+    background: #fff;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 25px;
     margin-right: 35px;
+    transition: color .25s, transform .25s;
 }
 
-
-main .content .gear_btn .gear_icon:hover {
+.content .gear_btn .gear_icon:hover {
     color: var(--blue-color);
+    transform: rotate(90deg);
 }
 
-main .profile_section {
+.profile_section {
     display: flex;
     gap: 30px;
+    animation: fadeInUp 0.6s ease 1.2s forwards;
+    opacity: 0;
 }
 
-main .profile_section .team_info {
-    flex: 1;
+.profile_section .info {
+    width: 300px;
+    background: #fff;
     padding: 15px;
-}
-
-
-
-main .profile_section .info {
-    width: 15%;
-    background-color: white;
-    padding: 15px 3px;
     border-radius: 15px;
     margin-left: 35px;
+    transition: box-shadow .3s ease;
 }
 
-main .profile_section .info .info_header {
+.profile_section .info:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.profile_section .info .info_header {
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
     margin-bottom: 20px;
 }
 
-main .profile_section .info .info_header img {
+.profile_section .info .info_header img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     border: 2px solid var(--blue-color);
     border-right-color: var(--grey-color);
     cursor: pointer;
+    transition: transform .3s;
 }
 
-main .profile_section .info .info_header .icon .icon_pen {
-    background-color: var(--background-color);
+.profile_section .info .info_header img:hover {
+    transform: scale(1.1);
+}
+
+.profile_section .info .info_header .icon .icon_pen {
+    background: var(--background-color);
     padding: 5px;
     border-radius: 5px;
+    transition: all .25s;
 }
 
-
-main .profile_section .info .info_header .icon .icon_pen:hover {
-    background-color: var(--blue-color);
+.profile_section .info .info_header .icon .icon_pen:hover {
+    background: var(--blue-color);
     color: white;
     cursor: pointer;
+    transform: rotate(15deg);
 }
 
-main .profile_section .info .info_intro {
+.profile_section .info .info_intro {
     padding: 0 15px;
     border-bottom: 2px solid var(--background-color);
 }
 
-main .profile_section .info .info_intro p {
+.profile_section .info .info_intro p {
     color: var(--grey-color);
     font-size: 14px;
     line-height: 1.5;
     padding-bottom: 10px;
 }
 
-main .profile_section .info .main_info {
+.profile_section .info .main_info {
     padding: 15px;
     display: flex;
     flex-direction: column;
     font-size: 14px;
     color: var(--grey-color);
     line-height: 1.5;
-
 }
 
-main .profile_section .info .main_info h3 {
+.profile_section .info .main_info h3 {
     color: black;
 }
 
-main .profile_section .info .main_info form .form_group {
+.profile_section .info .main_info form .form_group {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-main .profile_section .info .main_info form .form_group>div {
+.profile_section .info .main_info form .form_group>div {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-main .profile_section .info .main_info form .form_group>div input {
+.profile_section .info .main_info form .form_group>div input {
     padding: 8px 10px;
     border: 2px solid var(--background-color);
     border-radius: 15px;
     color: var(--grey-color);
     margin-bottom: 5px;
+    transition: border-color .25s;
 }
 
-main .profile_section .info .main_info form .form_group>div input:focus {
+.profile_section .info .main_info form .form_group>div input:focus {
     border: 2px solid var(--blue-color);
     outline: none;
 }
 
-main .profile_section .info .main_info form .form_group>div label {
+.profile_section .info .main_info form .form_group>div label {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    margin: 5px 5px;
+    margin: 5px;
 }
 
-/* Location icon - Blue color */
-main .profile_section .info .main_info form .form_group .location input {
-    padding: 8px 35px 8px 10px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
-    background-size: 25px 25px;
+.profile_section .team_info {
+    flex: 1;
+    padding: 15px;
 }
 
-/* Birthdate icon - Green color */
-main .profile_section .info .main_info form .form_group .birthdate input {
-    padding: 8px 35px 8px 10px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
-    background-size: 25px 25px;
-}
-
-main .profile_section .team_info .header ul {
+.profile_section .team_info .header ul {
     display: flex;
     list-style: none;
-    background-color: var(--light-grey-color);
+    background: var(--light-grey-color);
     border-radius: 30px;
     width: fit-content;
 }
 
-main .profile_section .team_info .header ul li {
+.profile_section .team_info .header ul li {
     padding: 15px 60px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all .3s;
+    border-radius: 30px;
 }
 
-main .profile_section .team_info .header ul li a {
+.profile_section .team_info .header ul li a {
     text-decoration: none;
     color: black;
     font-weight: 600;
 }
 
-main .profile_section .team_info .header ul li:hover {
-    background-color: var(--blue-color);
-    border-radius: 30px;
+.profile_section .team_info .header ul li:hover,
+.profile_section .team_info .header ul li.active {
+    background: var(--blue-color);
 }
 
-main .profile_section .team_info .header ul li:hover a {
+.profile_section .team_info .header ul li:hover a,
+.profile_section .team_info .header ul li.active a {
     color: white;
 }
 
-main .profile_section .team_info .header ul li.active {
-    background-color: var(--blue-color);
-    border-radius: 30px;
-}
-
-main .profile_section .team_info .header ul li.active a {
-    color: white;
-}
-
-main .profile_section .team_cards {
+.profile_section .team_cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 20px;
 }
 
-main .profile_section .team_cards .team_card {
-    background-color: white;
+.profile_section .team_cards .team_card {
+    background: #fff;
     text-align: center;
-    padding: 20px 60px;
+    padding: 20px;
     border-radius: 15px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform .3s, box-shadow .3s;
+    animation: cardSlideUp 0.5s ease forwards;
+    opacity: 0;
 }
 
-main .profile_section .team_cards .team_card img {
+.profile_section .team_cards .team_card:nth-child(1) {
+    animation-delay: 1.4s;
+}
+
+.profile_section .team_cards .team_card:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.profile_section .team_cards .team_card:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.profile_section .team_cards .team_card:nth-child(4) {
+    animation-delay: 1.7s;
+}
+
+.profile_section .team_cards .team_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+.profile_section .team_cards .team_card img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin-bottom: 15px;
     border: 3px solid var(--blue-color);
     border-right-color: var(--grey-color);
+    transition: transform .3s;
 }
 
-main .profile_section .team_cards .team_card h4 {
+.profile_section .team_cards .team_card:hover img {
+    transform: scale(1.1);
+}
+
+.profile_section .team_cards .team_card h4 {
     margin: 5px;
-
 }
 
-main .profile_section .team_cards .team_card span {
+.profile_section .team_cards .team_card span {
     display: block;
     margin: auto;
     padding: 5px 15px;
@@ -422,4 +448,199 @@ main .profile_section .team_cards .team_card span {
     color: var(--grey-color);
     margin-top: 10px;
     width: fit-content;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottomRight {
+    from {
+        transform: translate(50%, 50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media(max-width:1024px) {
+    .profile_section .team_cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        flex-direction: row;
+        padding: 12px;
+        border-radius: 0;
+        animation: slideInFromTop 0.6s ease 0.1s forwards;
+        transform: translateY(-100%);
+    }
+
+    main {
+        margin: 20px 0 0;
+        animation: slideInFromBottom 0.7s ease 0.4s forwards;
+        transform: translateY(100%);
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar .search {
+        width: 100%;
+    }
+
+    .navbar .profile {
+        gap: 18px;
+    }
+
+    .profile_section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile_section .info {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .profile_section .team_info .header ul li {
+        padding: 12px 30px;
+    }
+
+    .profile_section .team_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:500px) {
+
+    aside {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        animation: slideInFromBottom 0.7s ease 0.2s forwards;
+        transform: translateY(100%);
+    }
+
+    .navbar {
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .navbar .search {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .navbar .profile {
+        gap: 12px;
+    }
+
+    .navbar .profile_content p {
+        display: none;
+    }
+
+    .navbar .profile_content img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .content .profile {
+        margin-left: 0;
+    }
+
+    .content .gear_btn .gear_icon {
+        margin-right: 0;
+    }
+
+    .profile_section .info {
+        margin-left: 0;
+    }
+
+    .profile_section .team_info .header ul li {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .profile_section .team_cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
